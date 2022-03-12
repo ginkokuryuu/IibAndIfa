@@ -1,26 +1,33 @@
 import React, { useState, useRef, useEffect } from 'react'
 import MessagesList from './MessagesList'
 import {v4 as uuidv4} from 'uuid'
+import { getDatabase, ref, onValue, push, child, update } from 'firebase/database'
 
 export default function SweetMessages() {
-    const [messages, setMessages] =  useState([
-        {
-            id: 1,
-            sender: 'habib',
-            message: 'Congrats'
-        },
-        {
-            id: 2,
-            sender: 'tampan',
-            message: 'Congratulations'
-        }
-    ])
+    const [messages, setMessages] =  useState([])
     const messageRef = useRef();
     const nameRef = useRef();
 
+    const dbRef = getDatabase();
+    const allMessagesRef = ref(dbRef, 'messages/');
+
+    function updateMessages(data){
+        var arrayData = Object.entries(data);
+        var arrayResult = [];
+        arrayData.map(theData => {
+            arrayResult.push(theData[1]);
+        })
+
+        setMessages(arrayResult);
+    }
+
     useEffect(() => {
-        console.log("Fetch Data")
-    }, [])
+        const listener = onValue(allMessagesRef, snapshot => {
+            const data = snapshot.val();
+            updateMessages(data);
+        });
+        return listener;
+    }, []);
 
     function handleAddMessage(e){
         var name = nameRef.current.value;
@@ -29,12 +36,30 @@ export default function SweetMessages() {
         if(message === '') return;
         if(name === '') name = "Anonymous";
 
-        setMessages(prevMessage => {
-            return [...prevMessage, {id:uuidv4(), sender: name, message: message}]
-        })
+        try {
+            postMessage(name, message);
+        } catch (error) {
+            console.log(error);
+        }
         
         nameRef.current.value = null;
         messageRef.current.value = null;
+    }
+
+    function postMessage(sender, message){
+        const db = getDatabase();
+        const postData = {
+            id: uuidv4(),
+            sender: sender,
+            messages: message
+        };
+
+        const newPostKey = push(child(ref(db), '/messages/')).key;
+
+        const updates = {};
+        updates['messages/' + newPostKey] = postData;
+
+        return update(ref(dbRef), updates);
     }
 
     return (
