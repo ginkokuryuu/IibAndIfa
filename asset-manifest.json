@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/iib-and-ifa/static/css/main.e6c13ad2.css",
-    "main.js": "/iib-and-ifa/static/js/main.d87fb63c.js",
+    "main.css": "/iib-and-ifa/static/css/main.9b7ac4e0.css",
+    "main.js": "/iib-and-ifa/static/js/main.59e5f7ae.js",
     "static/js/787.c8e1cbc0.chunk.js": "/iib-and-ifa/static/js/787.c8e1cbc0.chunk.js",
     "index.html": "/iib-and-ifa/index.html",
-    "main.e6c13ad2.css.map": "/iib-and-ifa/static/css/main.e6c13ad2.css.map",
-    "main.d87fb63c.js.map": "/iib-and-ifa/static/js/main.d87fb63c.js.map",
+    "main.9b7ac4e0.css.map": "/iib-and-ifa/static/css/main.9b7ac4e0.css.map",
+    "main.59e5f7ae.js.map": "/iib-and-ifa/static/js/main.59e5f7ae.js.map",
     "787.c8e1cbc0.chunk.js.map": "/iib-and-ifa/static/js/787.c8e1cbc0.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.e6c13ad2.css",
-    "static/js/main.d87fb63c.js"
+    "static/css/main.9b7ac4e0.css",
+    "static/js/main.59e5f7ae.js"
   ]
 }
