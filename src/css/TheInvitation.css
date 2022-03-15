@@ -118,6 +118,38 @@
     background-color: #a67a5b;
 }
 
+.ar-rum{
+    margin: 10%;
+    margin-top: 15px;
+    margin-bottom: 50px;
+    color: #805e46;
+    text-align: center;
+    font-weight: 300;
+    font-size: 1.1rem;
+}
+
+.ar-rum .surah{
+    margin-top: 30px;
+}
+
+.triple-flower{
+    width: 20%;
+    margin-top: 50px;
+    margin-left: 40%;
+    right: 0;
+    left: 0;
+}
+
+.bride-photos{
+    width: 100%;
+    height: auto;
+}
+
+.bride-photos .imageContained{
+    min-height: 0;
+    width: 100%;
+}
+
 @media screen and (max-width: 1200px){
     .banner .text {
         font-size: 5.5em;

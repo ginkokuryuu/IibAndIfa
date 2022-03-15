@@ -6,9 +6,31 @@ import { useScrollLock } from '../libs/useScrollLock'
 export default function TheInvitation() {
     const { lockScroll, unlockScroll } = useScrollLock();
 
+    window.onbeforeunload = function () {
+        window.scrollTo(0, 0);
+    }
+
     useEffect(() => {
         lockScroll();
     }, [])
+
+    function scrollTo(offset, callback) {
+        const fixedOffset = offset.toFixed();
+        const onScroll = function () {
+            if (window.pageYOffset.toFixed() === fixedOffset) {
+                console.log(window.pageYOffset.toFixed());
+                window.removeEventListener('scroll', onScroll)
+                callback()
+            }
+        }
+
+        window.addEventListener('scroll', onScroll)
+        onScroll()
+        window.scrollTo({
+            top: offset,
+            behavior: 'smooth'
+        })
+    }
 
     function openInvitation(e) {
         var target = e.target.parentNode.parentNode;
@@ -32,13 +54,7 @@ export default function TheInvitation() {
 
                 <img className='imageFrame-bot' src="/iib-and-ifa/images/shapes/b1.png" alt="" />
 
-                <div className='border'>
-                    <div className='left-top'></div>
-                    <div className='left-bot'></div>
-                    <div className='top'></div>
-                    <div className='right'></div>
-                    <div className='bottom'></div>
-                </div>
+                {border()}
 
                 <div className='popup'>
                     <div className='popup-container'>
@@ -59,19 +75,38 @@ export default function TheInvitation() {
                     </div>
                 </div>
             </div>
-            <br />
-            <br />
-            <br />
-            <br />
-            <br />
-            <br />
-            <br />
-            <br />
-            <br />
-            <br />
-            <br />
-            <br />
-            <br />
+
+            <img className='triple-flower' src="/iib-and-ifa/images/shapes/triple-flower.png" alt="" />
+
+            {ar_rum()}
+
+            {imagePrefabTopBot("photos/test3.png", "shapes/t3.png", "shapes/b3.png", "bride-photos")}
+            <br /><br /><br />
+        </div>
+    )
+}
+
+const ar_rum = () => {
+    return (
+        <div className='ar-rum'>
+            <div className='verse'>
+                “And of His signs is that He created for you from yourselves mates that you may find tranquillity in them; and He placed between you affection and mercy. Indeed in that are signs for a people who give thought.”
+            </div>
+            <div className='surah'>
+                ( QS. Ar-Rum 21 )
+            </div>
+        </div>
+    )
+}
+
+const border = () => {
+    return (
+        <div className='border'>
+            <div className='left-top'></div>
+            <div className='left-bot'></div>
+            <div className='top'></div>
+            <div className='right'></div>
+            <div className='bottom'></div>
         </div>
     )
 }
@@ -79,8 +114,8 @@ export default function TheInvitation() {
 const imagePrefabBot = (image, frame, extraTag) => {
     return (
         <div className={"imageContainer " + extraTag}>
-            <img className='imageContained' src={image} alt="" />
-            <img className='imageFrame-bot' src={frame} alt="" />
+            <img className='imageContained' src={"/iib-and-ifa/images/" + image} alt="" />
+            <img className='imageFrame-bot' src={"/iib-and-ifa/images/" + frame} alt="" />
         </div>
     )
 }
@@ -88,8 +123,8 @@ const imagePrefabBot = (image, frame, extraTag) => {
 const imagePrefabTop = (image, frame, extraTag) => {
     return (
         <div className={"imageContainer " + extraTag}>
-            <img className='imageContained' src={image} alt='' />
-            <img className='imageFrame-top' src={frame} alt="" />
+            <img className='imageContained' src={"/iib-and-ifa/images/" + image} alt='' />
+            <img className='imageFrame-top' src={"/iib-and-ifa/images/" + frame} alt="" />
         </div>
     )
 }
@@ -97,9 +132,9 @@ const imagePrefabTop = (image, frame, extraTag) => {
 const imagePrefabTopBot = (image, frameTop, frameBot, extraTag) => {
     return (
         <div className={"imageContainer " + extraTag}>
-            <img className='imageContained' src={image} alt='' />
-            <img className='imageFrame-top' src={frameTop} alt="" />
-            <img className='imageFrame-bot' src={frameBot} alt="" />
+            <img className='imageContained' src={"/iib-and-ifa/images/" + image} alt='' />
+            <img className='imageFrame-top' src={"/iib-and-ifa/images/" + frameTop} alt="" />
+            <img className='imageFrame-bot' src={"/iib-and-ifa/images/" + frameBot} alt="" />
         </div>
     )
 }
