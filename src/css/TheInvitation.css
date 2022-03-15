@@ -1,0 +1,136 @@
+.banner{
+    height: 100vh;
+    width: 100%;
+    overflow: hidden;
+}
+
+.imageContainer {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.imageContained {
+    position: relative;
+    flex-shrink: 0;
+    min-width: 100%;
+    min-height: 100%;
+}
+
+.imageOverlay {
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: rgba(0,0,0,0.5);
+}
+
+.imageFrame-bot {
+    position: absolute;
+    width: 100%;
+    bottom: 0;
+    left: 0;
+}
+
+.imageFrame-top {
+    position: absolute;
+    width: 100%;
+    top: 0;
+    left: 0;
+}
+
+.banner .text {
+    margin-top: 30vh;
+    position: absolute;
+    left: 10%;
+    text-align: left;
+    color: #faf0dc;
+    font-family: 'Montez', cursive;
+    font-size: 5rem;
+}
+
+.banner .title{
+    font-size: 0.7em;
+    margin-bottom: 1vh;
+}
+
+.banner .date{
+    margin-top: 5vh;
+    font-family: 'Aleo', serif;
+    font-weight: 300;
+    font-size: 0.4em;
+}
+
+.border{
+    position: absolute;
+    height: 100vh;
+    width: 100%;
+}
+
+.border .top{
+    background-color: #faf0dc;
+    height: 5px;
+    width: 70%;
+    position: absolute;
+    top: 10%;
+    left: 15%;
+}
+
+.border .bottom{
+    background-color: #faf0dc;
+    height: 5px;
+    width: 70%;
+    position: absolute;
+    bottom: 10%;
+    left: 15%;
+}
+
+.border .right{
+    background-color: #faf0dc;
+    height: 80%;
+    width: 5px;
+    position: absolute;
+    bottom: 10%;
+    right: 15%;
+}
+
+.border .left-top{
+    background-color: #faf0dc;
+    height: 35%;
+    width: 5px;
+    position: absolute;
+    top: 10%;
+    left: 15%;
+}
+
+.border .left-bot{
+    background-color: #faf0dc;
+    height: 5%;
+    width: 5px;
+    position: absolute;
+    bottom: 10%;
+    left: 15%;
+}
+
+.dark{
+    background-color: #a67a5b;
+}
+
+@media screen and (max-width: 1200px){
+    .banner .text {
+        font-size: 5.5em;
+    }
+}
+
+@media screen and (max-width: 1024px){
+    .banner .text {
+        font-size: 5em;
+    }
+}
+@media screen and (max-width: 768px){
+    .banner .text {
+        font-size: 3.5em;
+    }
+}

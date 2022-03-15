@@ -15,7 +15,7 @@ export default function SweetMessages() {
         var arrayData = Object.entries(data);
         var arrayResult = [];
         arrayData.map(theData => {
-            arrayResult.push(theData[1]);
+            arrayResult = [theData[1], ...arrayResult];
         })
 
         setMessages(arrayResult);
@@ -47,14 +47,13 @@ export default function SweetMessages() {
     }
 
     function postMessage(sender, message){
-        const db = getDatabase();
         const postData = {
             id: uuidv4(),
             sender: sender,
             messages: message
         };
 
-        const newPostKey = push(child(ref(db), '/messages/')).key;
+        const newPostKey = push(child(ref(dbRef), '/messages/')).key;
 
         const updates = {};
         updates['messages/' + newPostKey] = postData;
@@ -65,10 +64,10 @@ export default function SweetMessages() {
     return (
         <div>
             <h1>Sweet Messages</h1>
-            <MessagesList messages={messages} />
             <input ref={nameRef} type={"text"} placeholder="Enter your name"/>
             <input ref={messageRef} type={"text"} placeholder="Enter your message"/>
             <button onClick={handleAddMessage}>Add Message</button>
+            <MessagesList messages={messages} />
         </div>
     )
 }

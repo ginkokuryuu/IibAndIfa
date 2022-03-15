@@ -1,1 +1,70 @@
+body{
+    background-color: #e8dcb5;
+    font-family: "Roboto", sans-serif;
+    margin: 0%;
+    padding: 0%;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 
+.App{
+    background-color: #faf0dc;
+    width: 40vw;
+    overflow: hidden;
+    min-height: 100vh;
+}
+
+.shadow-4 {
+    box-shadow: 0 1px 1px rgba(0,0,0,0.15), 
+                0 2px 2px rgba(0,0,0,0.15), 
+                0 4px 4px rgba(0,0,0,0.15), 
+                0 8px 8px rgba(0,0,0,0.15);
+}
+
+.shadow-6 {
+    box-shadow: 0 1px 1px rgba(0,0,0,0.11), 
+                0 2px 2px rgba(0,0,0,0.11), 
+                0 4px 4px rgba(0,0,0,0.11), 
+                0 8px 8px rgba(0,0,0,0.11), 
+                0 16px 16px rgba(0,0,0,0.11), 
+                0 32px 32px rgba(0,0,0,0.11);
+}
+
+@media screen and (max-width: 1200px){
+    .App{
+        width: 55vw;
+    }
+}
+
+@media screen and (max-width: 1024px){
+    .App{
+        width: 70vw;
+    }
+}
+@media screen and (max-width: 768px){
+    .App{
+        width: 100vw;
+    }
+}
+
+::-webkit-scrollbar {
+    width: 0px;
+    height: 0px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    background: #e8dcb5; 
+}
+   
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: #a67a5b; 
+}
+  
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: #a67a5b; 
+}
