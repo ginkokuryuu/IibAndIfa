@@ -81,7 +81,45 @@ export default function TheInvitation() {
             {ar_rum()}
 
             {imagePrefabTopBot("photos/test3.png", "shapes/t3.png", "shapes/b3.png", "bride-photos")}
-            <br /><br /><br />
+            
+            {groom_bride()}
+        </div>
+    )
+}
+
+const groom_bride = () => {
+    return(
+        <div className='groom-bride'>
+            <div className='gb-title'>
+                Groom & Bride
+            </div>
+            <div className='person'>
+                <div className='person-name'>
+                    Nur Muhammad Husnul Habib Yahya
+                </div>
+                <div className='person-desc'>
+                    Putra ke empat
+                    <br />
+                    Bapak Yahya Ali (Alm) & 
+                    <br />
+                    Ibu Titin Hartiti Noer
+                </div>
+            </div>
+            <div className='and-sign'>
+                -&-
+            </div>
+            <div className='person'>
+                <div className='person-name'>
+                    Laksmita Anggarani
+                </div>
+                <div className='person-desc'>
+                    Putri ke dua
+                    <br />
+                    Bapak Teguh Bagus &
+                    <br />
+                    Nyonya Teguh Bagus
+                </div>
+            </div>
         </div>
     )
 }

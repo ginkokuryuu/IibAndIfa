@@ -48,7 +48,7 @@
     text-align: left;
     color: #faf0dc;
     font-family: 'Montez', cursive;
-    font-size: 5rem;
+    font-size: 86px;
 }
 
 .banner .title{
@@ -120,12 +120,12 @@
 
 .ar-rum{
     margin: 10%;
-    margin-top: 15px;
-    margin-bottom: 50px;
+    margin-top: 40px;
+    margin-bottom: 55px;
     color: #805e46;
     text-align: center;
     font-weight: 300;
-    font-size: 1.1rem;
+    font-size: 24px;
 }
 
 .ar-rum .surah{
@@ -150,19 +150,69 @@
     width: 100%;
 }
 
+.groom-bride{
+    text-align: center;
+    color: #805e46;
+    font-size: 36px;
+    font-weight: 300;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    padding-left: 5%;
+    padding-right: 5%;
+    font-size: 48px;
+}
+
+.gb-title{
+    font-family: 'Montez', cursive;
+    font-weight: 400;
+}
+
+.groom-bride .and-sign{
+    font-family: 'Montez', cursive;
+    font-weight: 400;
+    margin-top: 50px;
+}
+
+.groom-bride .person{
+    margin-top: 50px;
+}
+
+.groom-bride .person-name{
+    font-family: 'Montez', cursive;
+    font-weight: 400;
+    font-size: 48px;
+}
+
+.groom-bride .person-desc{
+    margin-top: 15px;
+    font-size: 24px;
+}
+
 @media screen and (max-width: 1200px){
     .banner .text {
-        font-size: 5.5em;
+        font-size: 74px;
     }
 }
 
 @media screen and (max-width: 1024px){
     .banner .text {
-        font-size: 5em;
+        font-size: 68px;
     }
 }
 @media screen and (max-width: 768px){
     .banner .text {
-        font-size: 3.5em;
+        font-size: 52px;
+    }
+
+    .ar-rum{
+        font-size: 18px;
+    }
+
+    .groom-bride .person-name{
+        font-size: 36px;
+    }
+
+    .groom-bride .person-desc{
+        font-size: 18px;
     }
 }
