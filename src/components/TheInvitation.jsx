@@ -2,6 +2,7 @@ import React, { useEffect } from 'react'
 import '../css/TheInvitation.css'
 import '../css/FirstLoadPopUp.css'
 import { useScrollLock } from '../libs/useScrollLock'
+import Countdown from './Countdown';
 
 export default function TheInvitation() {
     const { lockScroll, unlockScroll } = useScrollLock();
@@ -83,6 +84,8 @@ export default function TheInvitation() {
             {imagePrefabTopBot("photos/test3.png", "shapes/t3.png", "shapes/b3.png", "bride-photos")}
             
             {groom_bride()}
+
+            <Countdown/>
         </div>
     )
 }
