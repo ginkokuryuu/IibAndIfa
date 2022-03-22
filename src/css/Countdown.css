@@ -1,0 +1,85 @@
+.countdown{
+    margin-top: 70px;
+    text-align: center;
+    font-size: 48px;
+    color: #805e46;
+    width: 100%;
+}
+
+.timerText{
+    position: absolute;
+    color: #faf0dc;
+}
+
+.countTitle{
+    font-family: 'Montez', cursive;
+    font-size: 1em;
+}
+
+#timer{
+    font-family: 'Aleo', serif;
+    font-weight: 300;
+    margin-top: 25px;
+    font-size: 0.5em;
+}
+
+.imageContainer {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.imageContained {
+    position: relative;
+    flex-shrink: 0;
+    min-width: 100%;
+    min-height: 100%;
+}
+
+.countdown .imageContained{
+    min-height: 0;
+    width: 100%;
+}
+
+.imageOverlay {
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: rgba(0,0,0,0.5);
+}
+
+.imageFrame-bot {
+    position: absolute;
+    width: 100%;
+    bottom: 0;
+    left: 0;
+}
+
+.imageFrame-top {
+    position: absolute;
+    width: 100%;
+    top: 0;
+    left: 0;
+}
+
+@media screen and (max-width: 1200px){
+    .countdown{
+        font-size: 48px;
+    }
+}
+
+@media screen and (max-width: 1024px){
+    .countdown{
+        font-size: 48px;
+    }
+    
+}
+@media screen and (max-width: 768px){
+    .countdown{
+        font-size: 36px;
+    }
+    
+}

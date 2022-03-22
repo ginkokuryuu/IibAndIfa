@@ -1,0 +1,29 @@
+.revenue-place {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #a67a5b;
+    height: 100vh;
+}
+
+.revenue-content {
+    position: relative;
+    flex-shrink: 0;
+    min-width: 100%;
+    min-height: 100%;
+}
+
+.revenue-frame-bot {
+    position: absolute;
+    width: 100%;
+    bottom: 0;
+    left: 0;
+}
+
+.revenue-frame-top {
+    position: absolute;
+    width: 100%;
+    top: 0;
+    left: 0;
+}

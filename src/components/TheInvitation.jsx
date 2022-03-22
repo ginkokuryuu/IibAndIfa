@@ -3,6 +3,7 @@ import '../css/TheInvitation.css'
 import '../css/FirstLoadPopUp.css'
 import { useScrollLock } from '../libs/useScrollLock'
 import Countdown from './Countdown';
+import RevenuePlace from './RevenuePlace';
 
 export default function TheInvitation() {
     const { lockScroll, unlockScroll } = useScrollLock();
@@ -49,7 +50,7 @@ export default function TheInvitation() {
                     <div className='title'>The Wedding</div>
                     <div className='name'>Habib & Anggi</div>
                     <div className='date'>
-                        11 . 1 . 2024
+                        22 . 5 . 2022
                     </div>
                 </div>
 
@@ -82,16 +83,19 @@ export default function TheInvitation() {
             {ar_rum()}
 
             {imagePrefabTopBot("photos/test3.png", "shapes/t3.png", "shapes/b3.png", "bride-photos")}
-            
+
             {groom_bride()}
 
-            <Countdown/>
+            <Countdown />
+
+            <RevenuePlace />
+            
         </div>
     )
 }
 
 const groom_bride = () => {
-    return(
+    return (
         <div className='groom-bride'>
             <div className='gb-title'>
                 Groom & Bride
@@ -103,7 +107,7 @@ const groom_bride = () => {
                 <div className='person-desc'>
                     Putra ke empat
                     <br />
-                    Bapak Yahya Ali (Alm) & 
+                    Bapak Yahya Ali (Alm) &
                     <br />
                     Ibu Titin Hartiti Noer
                 </div>
