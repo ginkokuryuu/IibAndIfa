@@ -1,4 +1,4 @@
-.revenue-place {
+.revenue {
     position: relative;
     display: flex;
     justify-content: center;
@@ -9,9 +9,23 @@
 
 .revenue-content {
     position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    transform: translateY(-2%);
     flex-shrink: 0;
-    min-width: 100%;
-    min-height: 100%;
+    width: 80%;
+    height: 75%;
+    background-color: #faf0dc;
+    border-radius: 16px;
+
+    box-shadow: 0 1px 1px rgba(0,0,0,0.15), 
+                0 2px 2px rgba(0,0,0,0.15), 
+                0 4px 4px rgba(0,0,0,0.15), 
+                0 8px 8px rgba(0,0,0,0.15);
+
+    text-align: center;
 }
 
 .revenue-frame-bot {
@@ -26,4 +40,81 @@
     width: 100%;
     top: 0;
     left: 0;
+}
+
+.revenue-section{
+    font-size: 20px;
+    font-weight: 400;
+    margin-bottom: 8%;
+    color: #805e46;
+}
+
+.revenue-title{
+    font-family: 'Montez', cursive;
+    font-size: 2.5em;
+    margin-bottom: 5%;
+    font-weight: 400;
+}
+
+.revenue-link{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #a67a5b;
+    padding: 10px;
+    border-radius: 5px;
+    color: #faf0dc;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.revenue-place{
+    font-size: 20px;
+    font-weight: 300;
+    color: #805e46;
+    padding-left: 8%;
+    padding-right: 8%;
+    margin-bottom: 8%;
+}
+
+.revenue-link:hover{
+    box-shadow: 0 1px 1px rgba(0,0,0,0.15), 
+                0 2px 2px rgba(0,0,0,0.15), 
+                0 4px 4px rgba(0,0,0,0.15), 
+                0 8px 8px rgba(0,0,0,0.15);
+}
+
+.revenue-link img{
+    width: 25px;
+    margin-right: 5px;
+}
+
+@media screen and (max-width: 1200px){
+    .revenue-section{
+        font-size: 20px;
+    }
+
+    .revenue-place{
+        font-size: 20px;
+    }
+}
+
+@media screen and (max-width: 1024px){
+    .revenue-section{
+        font-size: 18px;
+    }
+
+    .revenue-place{
+        font-size: 18px;
+    }
+}
+
+@media screen and (max-width: 768px){
+    .revenue-section{
+        font-size: 16px;
+    }
+
+    .revenue-place{
+        font-size: 16px;
+    }
 }
