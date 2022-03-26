@@ -4,6 +4,7 @@ import '../css/FirstLoadPopUp.css'
 import { useScrollLock } from '../libs/useScrollLock'
 import Countdown from './Countdown';
 import RevenuePlace from './RevenuePlace';
+import VirtualWedding from './VirtualWedding';
 
 export default function TheInvitation() {
     const { lockScroll, unlockScroll } = useScrollLock();
@@ -43,12 +44,12 @@ export default function TheInvitation() {
     return (
         <div>
             <div className="imageContainer banner">
-                <img className='imageContained' src="/iib-and-ifa/images/photos/Test.png" alt='' />
+                <img className='imageContained' src="/iib-and-ifa/images/photos/Banner.png" alt='' />
                 <div className='imageOverlay'></div>
 
                 <div className='text'>
                     <div className='title'>The Wedding</div>
-                    <div className='name'>Habib & Anggi</div>
+                    <div className='name'>Iib & Ifa</div>
                     <div className='date'>
                         22 . 5 . 2022
                     </div>
@@ -60,6 +61,8 @@ export default function TheInvitation() {
 
                 <div className='popup'>
                     <div className='popup-container'>
+                        <img className='top-flower' src="/iib-and-ifa/images/shapes/flower-a.png" alt="" />
+                        <img className='bot-flower' src="/iib-and-ifa/images/shapes/flower-a.png" alt="" />
                         <div className='popup-text'>
                             <div className='invited'>
                                 You Are Invited!
@@ -68,7 +71,7 @@ export default function TheInvitation() {
                                 The Wedding Celebration of
                             </div>
                             <div className='name'>
-                                Habib & Anggi
+                                Iib & Ifa
                             </div>
                         </div>
                         <button className='open-invite' onClick={openInvitation}>
@@ -82,13 +85,15 @@ export default function TheInvitation() {
 
             {ar_rum()}
 
-            {imagePrefabTopBot("photos/test3.png", "shapes/t3.png", "shapes/b3.png", "bride-photos")}
+            {imagePrefabTopBot("photos/groom&bride.png", "shapes/t3.png", "shapes/b3.png", "bride-photos")}
 
             {groom_bride()}
 
             <Countdown />
 
             <RevenuePlace />
+
+            <VirtualWedding />
             
         </div>
     )
@@ -102,14 +107,14 @@ const groom_bride = () => {
             </div>
             <div className='person'>
                 <div className='person-name'>
-                    Nur Muhammad Husnul Habib Yahya
+                    Mas Iib
                 </div>
                 <div className='person-desc'>
-                    Putra ke empat
+                    Putra pertama
                     <br />
-                    Bapak Yahya Ali (Alm) &
+                    Bapak Rudy Hartono (Alm) &
                     <br />
-                    Ibu Titin Hartiti Noer
+                    Ibu Oom Mustakomah
                 </div>
             </div>
             <div className='and-sign'>
@@ -117,14 +122,14 @@ const groom_bride = () => {
             </div>
             <div className='person'>
                 <div className='person-name'>
-                    Laksmita Anggarani
+                    Nur Syarifah Wardani Yahya
                 </div>
                 <div className='person-desc'>
-                    Putri ke dua
+                    Putri ke tiga
                     <br />
-                    Bapak Teguh Bagus &
+                    Bapak Yahya Ali (Alm) &
                     <br />
-                    Nyonya Teguh Bagus
+                    Ibu Titin Hartini Noer
                 </div>
             </div>
         </div>

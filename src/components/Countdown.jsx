@@ -39,7 +39,7 @@ export default function Countdown() {
     }
 
     window.onload = function () {
-        var end = new Date('05/22/2022 00:55 AM'),
+        var end = new Date('05/22/2022 07:00 AM'),
             display = document.querySelector('#timer');
         startTimer(end, display);
     };
@@ -47,7 +47,7 @@ export default function Countdown() {
     return (
         <div className='countdown'>
             <div className="imageContainer">
-                <img className='imageContained' src="/iib-and-ifa/images/photos/test4.png" alt='' />
+                <img className='imageContained' src="/iib-and-ifa/images/photos/countdown.png" alt='' />
                 <div className='imageOverlay'></div>
 
                 <div className='timerText'>

@@ -72,19 +72,19 @@
 .border .top{
     background-color: #faf0dc;
     height: 5px;
-    width: 70%;
+    width: 80%;
     position: absolute;
     top: 10%;
-    left: 15%;
+    left: 10%;
 }
 
 .border .bottom{
     background-color: #faf0dc;
     height: 5px;
-    width: 70%;
+    width: 80%;
     position: absolute;
     bottom: 10%;
-    left: 15%;
+    left: 10%;
 }
 
 .border .right{
@@ -93,7 +93,7 @@
     width: 5px;
     position: absolute;
     bottom: 10%;
-    right: 15%;
+    right: 10%;
 }
 
 .border .left-top{
@@ -102,7 +102,7 @@
     width: 5px;
     position: absolute;
     top: 10%;
-    left: 15%;
+    left: 10%;
 }
 
 .border .left-bot{
@@ -111,7 +111,7 @@
     width: 5px;
     position: absolute;
     bottom: 10%;
-    left: 15%;
+    left: 10%;
 }
 
 .dark{
@@ -164,7 +164,7 @@
 
 .gb-title{
     font-family: 'Montez', cursive;
-    font-weight: 400;
+    font-weight: 600;
 }
 
 .groom-bride .and-sign{

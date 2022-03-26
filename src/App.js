@@ -4,15 +4,13 @@ import { initializeApp } from 'firebase/app';
 import { getDatabase } from "firebase/database";
 import RSVP from './components/RSVP';
 import TheInvitation from './components/TheInvitation';
-import FirstLoadPopUp from './components/FirstLoadPopUp';
 
 function App() {
   return (
     <div className="App shadow-6">
       <TheInvitation/>
-      {/* <RSVP/>
-      <SweetMessages/> */}
-      {/* <FirstLoadPopUp/> */}
+      {/* <RSVP/> */}
+      {/* <SweetMessages/> */}
     </div>
   );
 }

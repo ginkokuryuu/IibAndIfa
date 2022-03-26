@@ -45,7 +45,7 @@
 .revenue-section{
     font-size: 20px;
     font-weight: 400;
-    margin-bottom: 8%;
+    margin-bottom: 13%;
     color: #805e46;
 }
 
@@ -53,7 +53,7 @@
     font-family: 'Montez', cursive;
     font-size: 2.5em;
     margin-bottom: 5%;
-    font-weight: 400;
+    font-weight: 00;
 }
 
 .revenue-link{
@@ -74,7 +74,7 @@
     color: #805e46;
     padding-left: 8%;
     padding-right: 8%;
-    margin-bottom: 8%;
+    margin-bottom: 13%;
 }
 
 .revenue-link:hover{

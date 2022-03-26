@@ -20,6 +20,23 @@
     border-style: solid;
     border-width: 5px;
     background-color: rgba(250, 240, 220, 0.5);
+    /* background-color: #faf0dc; */
+}
+
+.top-flower{
+    position: absolute;
+    bottom: 0px;
+    right: -50%;
+    width: 100%;
+    transform: rotateZ(91deg);
+}
+
+.bot-flower{
+    position: absolute;
+    top: 0px;
+    left: -50%;
+    width: 100%;
+    transform: rotateZ(-89deg);
 }
 
 .popup-text{
@@ -28,8 +45,15 @@
     margin-top: 0;
     left: 0;
     right: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
     font-size: 36px;
     color: #a67a5b;
+    background-color: rgba(250, 240, 220, 0.5);
 }
 
 .popup .invited{
