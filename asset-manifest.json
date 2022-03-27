@@ -1,15 +1,15 @@
 {
   "files": {
     "main.css": "/iib-and-ifa/static/css/main.3333ee40.css",
-    "main.js": "/iib-and-ifa/static/js/main.3e8e352e.js",
+    "main.js": "/iib-and-ifa/static/js/main.bdc2d794.js",
     "static/js/787.c8e1cbc0.chunk.js": "/iib-and-ifa/static/js/787.c8e1cbc0.chunk.js",
     "index.html": "/iib-and-ifa/index.html",
     "main.3333ee40.css.map": "/iib-and-ifa/static/css/main.3333ee40.css.map",
-    "main.3e8e352e.js.map": "/iib-and-ifa/static/js/main.3e8e352e.js.map",
+    "main.bdc2d794.js.map": "/iib-and-ifa/static/js/main.bdc2d794.js.map",
     "787.c8e1cbc0.chunk.js.map": "/iib-and-ifa/static/js/787.c8e1cbc0.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.3333ee40.css",
-    "static/js/main.3e8e352e.js"
+    "static/js/main.bdc2d794.js"
   ]
 }
