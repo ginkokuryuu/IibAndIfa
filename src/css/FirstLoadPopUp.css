@@ -1,5 +1,6 @@
 .popup{
-    background-color: #faf0dc;
+    /* background-color: #faf0dc; */
+    background-color: #ffffff;
     position: absolute;
     top: 0;
     width: 100%;
@@ -16,10 +17,12 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    border: #a67a5b;
+    /* border: #a67a5b; */
+    border: #a4b1a0;
     border-style: solid;
     border-width: 5px;
-    background-color: rgba(250, 240, 220, 0.5);
+    /* background-color: rgba(250, 240, 220, 0.5); */
+    background-color: rgba(255, 255, 255, 0.5);
     /* background-color: #faf0dc; */
 }
 
@@ -40,7 +43,7 @@
 }
 
 .popup-text{
-    font-family: 'Aleo', serif;
+    position:absolute;
     text-align: center;
     margin-top: 0;
     left: 0;
@@ -52,8 +55,10 @@
     align-items: center;
     justify-content: center;
     font-size: 36px;
-    color: #a67a5b;
-    background-color: rgba(250, 240, 220, 0.5);
+    /* color: #a67a5b; */
+    color: #a4b1a0;
+    /* background-color: rgba(250, 240, 220, 0.5); */
+    background-color: rgba(255, 255, 255, 0.5);
 }
 
 .popup .invited{
@@ -62,35 +67,39 @@
 }
 
 .popup .wedding-celebration{
-    font-size: 0.5em;
+    font-family: 'palmaton';
+    font-size: 1em;
     font-weight: 400;
     margin-bottom: 2%;
 }
 
 .popup .name{
-    font-family: 'Montez', cursive;
     font-size: 2em;
 }
 
 .popup .open-invite{
     cursor: pointer;
-    font-family: 'Aleo', serif;
     font-weight: 600;
-    color: #a67a5b;
+    /* color: #a67a5b; */
+    color: #a4b1a0;
     padding: 10px;
     position: absolute;
     bottom: -25px;
-    border: #a67a5b;
+    /* border: #a67a5b; */
+    border: #a4b1a0;
     border-style: solid;
+    border-radius: 25px;
     border-width: 5px;
-    background-color: rgba(250, 240, 220, 1);
+    background-color: rgb(255, 255, 255);
     transition: 0.3s;
     font-size: 17px;
 }
 
 .popup .open-invite:hover{
-    color: rgba(250, 240, 220, 1);
-    background-color: #a67a5b;
+    /* color: rgba(250, 240, 220, 1);
+    background-color: #a67a5b; */
+    color: rgb(255, 255, 255);
+    background-color: #a4b1a0;
 }
 
 .animate {

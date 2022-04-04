@@ -7,10 +7,9 @@ export default function RevenuePlace() {
     }
 
     return (
-        <div>
+        <div className='dark-bg'>
+            {separator('top')}
             <div className='revenue'>
-                <img className='revenue-frame-bot' src="/iib-and-ifa/images/shapes/b5.png" alt="" />
-
                 <div className='revenue-content'>
                     <div className='revenue-section'>
                         <div className='revenue-title'>
@@ -19,15 +18,6 @@ export default function RevenuePlace() {
                         <div className='revenue-time'>
                             Minggu, 22 Mei 2022<br />
                             07.00 WIB - Selesai
-                        </div>
-                    </div>
-                    <div className='revenue-section'>
-                        <div className='revenue-title'>
-                            Resepsi
-                        </div>
-                        <div className='revenue-time'>
-                            Minggu, 22 Mei 2022<br />
-                            10.00 - 13.00 WIB ( 3 Sesi )
                         </div>
                     </div>
                     <div className='revenue-place'>
@@ -39,6 +29,35 @@ export default function RevenuePlace() {
                     </div>
                 </div>
             </div>
+            <div className='revenue'>
+                <div className='revenue-content'>
+                    <div className='revenue-section'>
+                        <div className='revenue-title'>
+                            Resepsi
+                        </div>
+                        <div className='revenue-time'>
+                            Minggu, 22 Mei 2022<br />
+                            13.00 - 16.00 WIB ( 3 Sesi )
+                        </div>
+                    </div>
+                    <div className='revenue-place'>
+                        Simposium Coffee, Jl. Dr. Moch Saleh No.12, Sukabumi, Kec. Mayangan, Kota Probolinggo, Jawa Timur 67219
+                    </div>
+                    <div className='revenue-link' onClick={() => openLink("https://maps.app.goo.gl/zUySF6CTJdJHc3JZ6")}>
+                        <img src="/iib-and-ifa/images/location-icon.png" alt="" />
+                        <div>View Location</div>
+                    </div>
+                </div>
+            </div>
+            {separator('bot')}
+        </div>
+    )
+}
+
+const separator = (side) => {
+    return (
+        <div className={'separator-' + side}>
+
         </div>
     )
 }

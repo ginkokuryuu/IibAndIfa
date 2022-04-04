@@ -9,12 +9,11 @@
     margin-bottom: 50px;
     font-size: 24px;
     text-align: center;
-    color: #805e46;
 }
 
 .virtual-title{
-    font-family: 'Montez', cursive;
-    font-size: 2em;
+    font-family: 'palmaton';
+    font-size: 2.5em;
     font-weight: 400;
     margin-bottom: 30px;
 }
@@ -25,10 +24,10 @@
 }
 
 .virtual-link{
-    background-color: #a67a5b;
+    background-color: #a4b1a0;
     padding: 10px;
     border-radius: 5px;
-    color: #faf0dc;
+    color: #ffffff;
     cursor: pointer;
     transition: 0.2s;
     font-size: 0.9em;

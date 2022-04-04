@@ -47,21 +47,33 @@ export default function RSVP() {
     }
 
     return (
-        <div className='rsvp'>
-            <h1 className='rsvp-title'>RSVP</h1>
-            <div className='rsvp--desc'>
-                We can't wait for our wedding day with you, please confirm your presence. Thank you.
+        <div>
+            {separator('top')}
+            <div className='rsvp'>
+                <h1 className='rsvp-title'>RSVP</h1>
+                <div className='rsvp-desc'>
+                    We can't wait for our wedding day with you, please confirm your presence. Thank you.
+                </div>
+                <div className='rsvp-form'>
+                    <input className='form-child' ref={nameRef} type={"text"} placeholder="Nama" />
+                    <input className='form-child' ref={alamatRef} type={"text"} placeholder="Alamat" />
+                    <select className='form-child' ref={rsvpChoice}>
+                        <option value="default">Apakah Anda Akan Hadir?</option>
+                        <option value="yes">Ya</option>
+                        <option value="no">Maaf, Tidak Bisa</option>
+                    </select>
+                    <button className='submit-btn' onClick={handleAddRSVP}>KIRIM</button>
+                </div>
             </div>
-            <div className='rsvp-form'>
-                <input ref={nameRef} type={"text"} placeholder="Nama" />
-                <input ref={alamatRef} type={"text"} placeholder="Alamat" />
-                <select ref={rsvpChoice}>
-                    <option value="default">Apakah Anda Akan Hadir?</option>
-                    <option value="yes">Ya</option>
-                    <option value="no">Maaf, </option>
-                </select>
-                <button onClick={handleAddRSVP}>Add Message</button>
-            </div>
+            {separator('bot')}
+        </div>
+    )
+}
+
+const separator = (side) => {
+    return (
+        <div className={'separator-' + side + ' dark-bg'}>
+
         </div>
     )
 }

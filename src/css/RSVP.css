@@ -1,5 +1,90 @@
 .rsvp{
-    margin: 10%;
-    margin-top: 50px;
+    padding: 13%;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    font-size: 24px;
+    text-align: center;
+    font-weight: 300;
+    background-color: #a4b1a0;
+    color: white;
+}
+
+.dark-bg{
+    /* background-color: #a67a5b; */
+    background-color: #a4b1a0;
+}
+
+.rsvp-title{
+    font-family: 'palmaton';
+    font-size: 2.5em;
+    font-weight: 400;
+    margin-top: 0;
+}
+
+.rsvp-desc{
     margin-bottom: 50px;
+}
+
+.rsvp-form{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    font-size: 1em;
+}
+
+.form-child{
+    width: 100%;
+}
+
+.rsvp-form input, select {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    font-size: 1em;
+    font-weight: 300;
+    margin-bottom: 15px;
+    padding: 1.5%;
+    background-color: inherit;
+    border: white;
+    border-style: solid;
+    color: inherit;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.rsvp-form option{
+    color: #a4b1a0;
+}
+
+.rsvp-form input::placeholder{
+    color: inherit;
+}
+
+.submit-btn{
+    font-family: 'Montserrat', sans-serif;
+    background-color: white;
+    color: #a4b1a0;
+    font-size: 1em;
+    font-weight: 300;
+    width: 100%;
+    padding: 1.5%;
+    border: none;
+}
+
+@media screen and (max-width: 1200px){
+    .rsvp{
+        font-size: 24px;
+    }
+}
+
+@media screen and (max-width: 1024px){
+    .rsvp{
+        font-size: 22px;
+    }
+}
+
+@media screen and (max-width: 768px){
+    .rsvp{
+        font-size: 20px;
+    }
 }

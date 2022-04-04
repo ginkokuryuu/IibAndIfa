@@ -14,7 +14,7 @@ export default function TheInvitation() {
     }
 
     useEffect(() => {
-        lockScroll();
+        // lockScroll();
     }, [])
 
     function scrollTo(offset, callback) {
@@ -48,16 +48,18 @@ export default function TheInvitation() {
                 <div className='imageOverlay'></div>
 
                 <div className='text'>
-                    <div className='title'>The Wedding</div>
-                    <div className='name'>Iib & Ifa</div>
+                    {/* <div className='title'>The Wedding</div> */}
+                    <div className='name'>
+                        syarifah
+                        <div className='name-and'>and</div>
+                        ibrahim
+                    </div>
                     <div className='date'>
                         22 . 5 . 2022
                     </div>
                 </div>
 
-                <img className='imageFrame-bot' src="/iib-and-ifa/images/shapes/b1.png" alt="" />
-
-                {border()}
+                {/* <img className='imageFrame-bot' src="/iib-and-ifa/images/shapes/b1.png" alt="" /> */}
 
                 <div className='popup'>
                     <div className='popup-container'>
@@ -71,7 +73,7 @@ export default function TheInvitation() {
                                 The Wedding Celebration of
                             </div>
                             <div className='name'>
-                                Iib & Ifa
+                                Ifa & Iib
                             </div>
                         </div>
                         <button className='open-invite' onClick={openInvitation}>
@@ -81,11 +83,15 @@ export default function TheInvitation() {
                 </div>
             </div>
 
+            {separator('top')}
+
             <img className='triple-flower' src="/iib-and-ifa/images/shapes/triple-flower.png" alt="" />
 
             {ar_rum()}
 
+            {separator('bot')}
             {imagePrefabTopBot("photos/groom&bride.png", "shapes/t3.png", "shapes/b3.png", "bride-photos")}
+            {separator('top')}
 
             {groom_bride()}
 
@@ -107,10 +113,10 @@ const groom_bride = () => {
             </div>
             <div className='person'>
                 <div className='person-name'>
-                    Mas Iib
+                    Ibrahim Ali Ramdhani
                 </div>
                 <div className='person-desc'>
-                    Putra pertama
+                    Putra kedua
                     <br />
                     Bapak Rudy Hartono (Alm) &
                     <br />
@@ -118,14 +124,14 @@ const groom_bride = () => {
                 </div>
             </div>
             <div className='and-sign'>
-                -&-
+                and
             </div>
             <div className='person'>
                 <div className='person-name'>
                     Nur Syarifah Wardani Yahya
                 </div>
                 <div className='person-desc'>
-                    Putri ke tiga
+                    Putri ketiga
                     <br />
                     Bapak Yahya Ali (Alm) &
                     <br />
@@ -161,11 +167,19 @@ const border = () => {
     )
 }
 
+const separator = (side) => {
+    return (
+        <div className={'separator-' + side}>
+
+        </div>
+    )
+}
+
 const imagePrefabBot = (image, frame, extraTag) => {
     return (
         <div className={"imageContainer " + extraTag}>
             <img className='imageContained' src={"/iib-and-ifa/images/" + image} alt="" />
-            <img className='imageFrame-bot' src={"/iib-and-ifa/images/" + frame} alt="" />
+            {/* <img className='imageFrame-bot' src={"/iib-and-ifa/images/" + frame} alt="" /> */}
         </div>
     )
 }
@@ -174,7 +188,7 @@ const imagePrefabTop = (image, frame, extraTag) => {
     return (
         <div className={"imageContainer " + extraTag}>
             <img className='imageContained' src={"/iib-and-ifa/images/" + image} alt='' />
-            <img className='imageFrame-top' src={"/iib-and-ifa/images/" + frame} alt="" />
+            {/* <img className='imageFrame-top' src={"/iib-and-ifa/images/" + frame} alt="" /> */}
         </div>
     )
 }
@@ -183,8 +197,8 @@ const imagePrefabTopBot = (image, frameTop, frameBot, extraTag) => {
     return (
         <div className={"imageContainer " + extraTag}>
             <img className='imageContained' src={"/iib-and-ifa/images/" + image} alt='' />
-            <img className='imageFrame-top' src={"/iib-and-ifa/images/" + frameTop} alt="" />
-            <img className='imageFrame-bot' src={"/iib-and-ifa/images/" + frameBot} alt="" />
+            {/* <img className='imageFrame-top' src={"/iib-and-ifa/images/" + frameTop} alt="" />
+            <img className='imageFrame-bot' src={"/iib-and-ifa/images/" + frameBot} alt="" /> */}
         </div>
     )
 }

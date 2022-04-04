@@ -8,16 +8,15 @@
 
 .timerText{
     position: absolute;
-    color: #faf0dc;
+    color: #ffffff;
 }
 
 .countTitle{
-    font-family: 'Montez', cursive;
-    font-size: 1em;
+    font-family: 'palmaton';
+    font-size: 1.2em;
 }
 
 #timer{
-    font-family: 'Aleo', serif;
     font-weight: 300;
     margin-top: 25px;
     font-size: 0.5em;

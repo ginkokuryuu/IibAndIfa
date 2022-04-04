@@ -9,7 +9,7 @@ function App() {
   return (
     <div className="App shadow-6">
       <TheInvitation/>
-      {/* <RSVP/> */}
+      <RSVP/>
       {/* <SweetMessages/> */}
     </div>
   );

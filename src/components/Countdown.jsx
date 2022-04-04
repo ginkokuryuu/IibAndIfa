@@ -46,6 +46,7 @@ export default function Countdown() {
 
     return (
         <div className='countdown'>
+            {separator('bot')}
             <div className="imageContainer">
                 <img className='imageContained' src="/iib-and-ifa/images/photos/countdown.png" alt='' />
                 <div className='imageOverlay'></div>
@@ -55,9 +56,17 @@ export default function Countdown() {
                     <div id='timer'>00:00:00:00</div>
                 </div>
 
-                <img className='imageFrame-top' src="/iib-and-ifa/images/shapes/t4.png" alt="" />
-                <img className='imageFrame-bot' src="/iib-and-ifa/images/shapes/b3-a.png" alt="" />
+                {/* <img className='imageFrame-top' src="/iib-and-ifa/images/shapes/t4.png" alt="" />
+                <img className='imageFrame-bot' src="/iib-and-ifa/images/shapes/b3-a.png" alt="" /> */}
             </div>
+        </div>
+    )
+}
+
+const separator = (side) => {
+    return (
+        <div className={'separator-' + side}>
+
         </div>
     )
 }

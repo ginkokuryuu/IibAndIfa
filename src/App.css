@@ -1,20 +1,23 @@
 body{
-    background-color: #e8dcb5;
-    font-family: "Roboto", sans-serif;
+    /* background-color: #e8dcb5; */
+    background-color: #517470;
     margin: 0%;
     padding: 0%;
     width: 100vw;
     display: flex;
     justify-content: center;
     align-items: center;
-    font-family: 'Aleo', serif;
+    font-family: 'Montserrat', sans-serif;
 }
 
 .App{
-    background-color: #faf0dc;
+    /* background-color: #faf0dc; */
+    background-color: white;
     width: 40vw;
     overflow: hidden;
     min-height: 100vh;
+    /* color: #a4b1a0; */
+    color: #517470;
 }
 
 .shadow-4 {
@@ -48,6 +51,11 @@ body{
     .App{
         width: 100vw;
     }
+}
+
+@font-face {
+    font-family: palmaton;
+    src: url(./fonts/Palmaton.ttf);
 }
 
 ::-webkit-scrollbar {
