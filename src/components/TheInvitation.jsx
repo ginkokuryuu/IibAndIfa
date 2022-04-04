@@ -14,7 +14,7 @@ export default function TheInvitation() {
     }
 
     useEffect(() => {
-        // lockScroll();
+        lockScroll();
     }, [])
 
     function scrollTo(offset, callback) {
