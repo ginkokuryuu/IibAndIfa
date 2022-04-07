@@ -1,43 +1,33 @@
-.rsvp{
+.message-container{
     padding: 13%;
     padding-top: 50px;
-    padding-bottom: 60px;
+    padding-bottom: 50px;
     font-size: 24px;
-    text-align: center;
     font-weight: 300;
-    background-color: #a4b1a0;
-    color: white;
 }
 
-.dark-bg{
-    /* background-color: #a67a5b; */
-    background-color: #a4b1a0;
-}
-
-.rsvp-title{
+.message-title{
     font-family: 'palmaton';
     font-size: 2.5em;
     font-weight: 400;
     margin-top: 0;
+    text-align: center;
 }
 
-.rsvp-desc{
-    margin-bottom: 50px;
-}
-
-.rsvp-form{
+.message-form{
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
     font-size: 1em;
+    margin-bottom: 50px;
 }
 
-.rsvp-form .form-child{
+.message-form .form-child{
     width: 100%;
 }
 
-.rsvp-form input, select {
+.message-form input, textarea {
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
     box-sizing: border-box;
@@ -46,45 +36,69 @@
     margin-bottom: 15px;
     padding: 1.5%;
     background-color: inherit;
-    border: white;
-    border-style: solid;
     color: inherit;
     font-family: 'Montserrat', sans-serif;
+    border: none;
+    resize: none;
 }
 
-.rsvp-form option{
+.message-form input{
+    border-bottom: 2px solid #a4b1a0;
+}
+
+.message-form .text-input{
+    height: 200%;
+}
+
+.message-form option{
     color: #a4b1a0;
 }
 
-.rsvp-form input::placeholder{
+.message-form input::placeholder{
     color: inherit;
 }
 
-.rsvp-form .submit-btn{
+.message-form .submit-btn{
     font-family: 'Montserrat', sans-serif;
-    background-color: white;
-    color: #a4b1a0;
-    font-size: 1em;
+    background-color: #a4b1a0;
+    color: white;
+    font-size: 0.8em;
     font-weight: 600;
     width: 100%;
     padding: 1.5%;
     border: none;
 }
 
+.message{
+    border-bottom: 2px solid #a4b1a0;
+    margin-bottom: 30px;
+    font-size: 0.7em;
+}
+
+.message .sender{
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+.message .message-text{
+    margin-top: 0;
+    margin-bottom: 10px;
+}
+
 @media screen and (max-width: 1200px){
-    .rsvp{
+    .message-container{
         font-size: 24px;
     }
 }
 
 @media screen and (max-width: 1024px){
-    .rsvp{
+    .message-container{
         font-size: 22px;
     }
 }
 
 @media screen and (max-width: 768px){
-    .rsvp{
+    .message-container{
         font-size: 20px;
     }
 }

@@ -62,9 +62,10 @@ export default function TheInvitation() {
                 {/* <img className='imageFrame-bot' src="/iib-and-ifa/images/shapes/b1.png" alt="" /> */}
 
                 <div className='popup'>
+                    <img className='top-flower' src="/iib-and-ifa/images/shapes/flower-a.png" alt="" />
+                    <img className='bot-flower' src="/iib-and-ifa/images/shapes/flower-a.png" alt="" />
+                    <div className='popup-overlay'></div>
                     <div className='popup-container'>
-                        <img className='top-flower' src="/iib-and-ifa/images/shapes/flower-a.png" alt="" />
-                        <img className='bot-flower' src="/iib-and-ifa/images/shapes/flower-a.png" alt="" />
                         <div className='popup-text'>
                             <div className='invited'>
                                 You Are Invited!

@@ -10,7 +10,7 @@ function App() {
     <div className="App shadow-6">
       <TheInvitation/>
       <RSVP/>
-      {/* <SweetMessages/> */}
+      <SweetMessages/>
     </div>
   );
 }

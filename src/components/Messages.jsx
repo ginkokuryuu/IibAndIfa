@@ -1,11 +1,11 @@
 import React from 'react'
+import '../css/Messages.css'
 
 export default function Messages({message}) {
   return (
-    <div>
-        <p>{message.sender}</p>
-        <p>{message.messages}</p>
-        <p>============================</p>
+    <div className='message'>
+        <p className='sender'>{message.sender}</p>
+        <p className='message-text'>{message.messages}</p>
     </div>
   )
 }
