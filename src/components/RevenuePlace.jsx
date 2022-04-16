@@ -1,10 +1,13 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import '../css/RevenuePlace.css'
 
 export default function RevenuePlace() {
     const openLink = (url) => {
         window.open(url, '_blank').focus();
     }
+
+    useEffect(() => {
+    }, [])
 
     return (
         <div className='dark-bg'>
@@ -37,7 +40,8 @@ export default function RevenuePlace() {
                         </div>
                         <div className='revenue-time'>
                             Minggu, 22 Mei 2022<br />
-                            13.00 - 16.00 WIB ( 3 Sesi )
+                            {getSession()}
+                            {/* 13.00 - 16.00 WIB ( 3 Sesi ) */}
                         </div>
                     </div>
                     <div className='revenue-place'>
@@ -59,5 +63,25 @@ const separator = (side) => {
         <div className={'separator-' + side}>
 
         </div>
+    )
+}
+
+const getSession = () => {
+    const params = new Proxy(new URLSearchParams(window.location.search), {
+        get: (searchParams, prop) => searchParams.get(prop),
+    });
+    
+    // Get the value of "some_key" in eg "https://example.com/?some_key=some_value"
+    var session = params.sesi; // "some_value"
+
+    if(session == null){
+        return "13.00 - 14.00";
+    }
+
+    var start = session - 1 + 13;
+    var end = start + 1;
+
+    return (
+        start + ".00 - " + end + ".00"
     )
 }

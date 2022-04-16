@@ -11,6 +11,7 @@ body{
 }
 
 .App{
+    position: relative;
     /* background-color: #faf0dc; */
     background-color: white;
     width: 40vw;

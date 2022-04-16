@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react'
+import React, { useEffect, useState } from 'react'
 import '../css/TheInvitation.css'
 import '../css/FirstLoadPopUp.css'
 import { useScrollLock } from '../libs/useScrollLock'
@@ -6,39 +6,40 @@ import Countdown from './Countdown';
 import RevenuePlace from './RevenuePlace';
 import VirtualWedding from './VirtualWedding';
 
+import '../css/BackgroundMusic.css'
+import song from '../sounds/TheOnlyOne2.mp3'
+
 export default function TheInvitation() {
     const { lockScroll, unlockScroll } = useScrollLock();
+
 
     window.onbeforeunload = function () {
         window.scrollTo(0, 0);
     }
 
+    const [isPaused, setPaused] = useState("false");
+    const [audio] = useState(typeof Audio !== "undefined" && new Audio(song));
+
     useEffect(() => {
         lockScroll();
     }, [])
-
-    function scrollTo(offset, callback) {
-        const fixedOffset = offset.toFixed();
-        const onScroll = function () {
-            if (window.pageYOffset.toFixed() === fixedOffset) {
-                console.log(window.pageYOffset.toFixed());
-                window.removeEventListener('scroll', onScroll)
-                callback()
-            }
-        }
-
-        window.addEventListener('scroll', onScroll)
-        onScroll()
-        window.scrollTo({
-            top: offset,
-            behavior: 'smooth'
-        })
-    }
 
     function openInvitation(e) {
         var target = e.target.parentNode.parentNode;
         target.className += ' animate';
         unlockScroll();
+        audio.play();
+        audio.volume = 0.3;
+    }
+
+    function toggleMusic(e) {
+        if (isPaused) {
+            audio.pause();
+        }
+        else {
+            audio.play();
+        }
+        setPaused(!isPaused);
     }
 
     return (
@@ -101,7 +102,13 @@ export default function TheInvitation() {
             <RevenuePlace />
 
             <VirtualWedding />
-            
+
+            <div className='music-btn-container'>
+                <div className='music-btn-bg'>
+                    <button className={isPaused ? "paused music-btn" : "music-btn"} onClick={toggleMusic}></button>
+                </div>
+            </div>
+
         </div>
     )
 }
@@ -110,22 +117,7 @@ const groom_bride = () => {
     return (
         <div className='groom-bride'>
             <div className='gb-title'>
-                Groom & Bride
-            </div>
-            <div className='person'>
-                <div className='person-name'>
-                    Ibrahim Ali Ramdhani
-                </div>
-                <div className='person-desc'>
-                    Putra kedua
-                    <br />
-                    Bapak Rudy Hartono (Alm) &
-                    <br />
-                    Ibu Oom Mustakomah
-                </div>
-            </div>
-            <div className='and-sign'>
-                and
+                Bride & Groom
             </div>
             <div className='person'>
                 <div className='person-name'>
@@ -137,6 +129,21 @@ const groom_bride = () => {
                     Bapak Yahya Ali (Alm) &
                     <br />
                     Ibu Titin Hartini Noer
+                </div>
+            </div>
+            <div className='and-sign'>
+                and
+            </div>
+            <div className='person'>
+                <div className='person-name'>
+                    Ibrahim Ali Ramdhani
+                </div>
+                <div className='person-desc'>
+                    Putra kedua
+                    <br />
+                    Bapak Rudy Hartono (Alm) &
+                    <br />
+                    Ibu Oom Mustakomah
                 </div>
             </div>
         </div>
@@ -156,40 +163,11 @@ const ar_rum = () => {
     )
 }
 
-const border = () => {
-    return (
-        <div className='border'>
-            <div className='left-top'></div>
-            <div className='left-bot'></div>
-            <div className='top'></div>
-            <div className='right'></div>
-            <div className='bottom'></div>
-        </div>
-    )
-}
 
 const separator = (side) => {
     return (
         <div className={'separator-' + side}>
 
-        </div>
-    )
-}
-
-const imagePrefabBot = (image, frame, extraTag) => {
-    return (
-        <div className={"imageContainer " + extraTag}>
-            <img className='imageContained' src={"/iib-and-ifa/images/" + image} alt="" />
-            {/* <img className='imageFrame-bot' src={"/iib-and-ifa/images/" + frame} alt="" /> */}
-        </div>
-    )
-}
-
-const imagePrefabTop = (image, frame, extraTag) => {
-    return (
-        <div className={"imageContainer " + extraTag}>
-            <img className='imageContained' src={"/iib-and-ifa/images/" + image} alt='' />
-            {/* <img className='imageFrame-top' src={"/iib-and-ifa/images/" + frame} alt="" /> */}
         </div>
     )
 }
