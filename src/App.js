@@ -8,9 +8,11 @@ import TheInvitation from './components/TheInvitation';
 function App() {
   return (
     <div className="App shadow-6">
-      <TheInvitation/>
-      <RSVP/>
-      <SweetMessages/>
+      <TheInvitation />
+      <RSVP />
+      <SweetMessages />
+      {separator('bot')}
+      {imagePrefabTopBot("photos/end-credit-3.png", "bride-photos")}
     </div>
   );
 }
@@ -28,6 +30,25 @@ const firebaseConfig = {
   // For Firebase JavaScript SDK v7.20.0 and later, `measurementId` is an optional field
   measurementId: "G-SVWX2KZFS6",
 };
+
+const imagePrefabTopBot = (image, extraTag) => {
+  return (
+    <div className={"imageContainer " + extraTag}>
+      <img className='imageContained' src={"/iib-and-ifa/images/" + image} alt='' />
+      <div className='end-credit'>
+        <div className='end-credit-text'>Thank you</div>
+        <div className='end-credit-made-by '>made by hy.</div>
+      </div>
+    </div>
+  )
+}
+
+const separator = (side) => {
+  return (
+    <div className={'separator-' + side}>
+    </div>
+  )
+}
 
 export const firebaseApp = initializeApp(firebaseConfig);
 export const database = getDatabase(firebaseApp);

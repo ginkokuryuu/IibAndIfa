@@ -7,7 +7,7 @@ import RevenuePlace from './RevenuePlace';
 import VirtualWedding from './VirtualWedding';
 
 import '../css/BackgroundMusic.css'
-import song from '../sounds/TheOnlyOne2.mp3'
+import song from '../sounds/SesaatKauHadir.mp3'
 
 export default function TheInvitation() {
     const { lockScroll, unlockScroll } = useScrollLock();
@@ -47,7 +47,6 @@ export default function TheInvitation() {
             <div className="imageContainer banner">
                 <img className='imageContained' src="/iib-and-ifa/images/photos/Banner.png" alt='' />
                 <div className='imageOverlay'></div>
-
                 <div className='text'>
                     {/* <div className='title'>The Wedding</div> */}
                     <div className='name'>
@@ -60,6 +59,7 @@ export default function TheInvitation() {
                     </div>
                 </div>
 
+
                 {/* <img className='imageFrame-bot' src="/iib-and-ifa/images/shapes/b1.png" alt="" /> */}
 
                 <div className='popup'>
@@ -68,6 +68,9 @@ export default function TheInvitation() {
                     <div className='popup-overlay'></div>
                     <div className='popup-container'>
                         <div className='popup-text'>
+                            <div className='invitee-name'>
+                                {getName()},
+                            </div>
                             <div className='invited'>
                                 You Are Invited!
                             </div>
@@ -92,7 +95,7 @@ export default function TheInvitation() {
             {ar_rum()}
 
             {separator('bot')}
-            {imagePrefabTopBot("photos/groom&bride.png", "shapes/t3.png", "shapes/b3.png", "bride-photos")}
+            {imagePrefabTopBot("photos/groom&bride4.png", "shapes/t3.png", "shapes/b3.png", "bride-photos")}
             {separator('top')}
 
             {groom_bride()}
@@ -101,7 +104,13 @@ export default function TheInvitation() {
 
             <RevenuePlace />
 
+            {imagePrefabTopBot("photos/misc-3.png", "shapes/t3.png", "shapes/b3.png", "bride-photos")}
+            {separator('top')}
+
             <VirtualWedding />
+
+            {separator('bot')}
+            {imagePrefabTopBot("photos/misc-2.png", "shapes/t3.png", "shapes/b3.png", "bride-photos")}
 
             <div className='music-btn-container'>
                 <div className='music-btn-bg'>
@@ -163,7 +172,6 @@ const ar_rum = () => {
     )
 }
 
-
 const separator = (side) => {
     return (
         <div className={'separator-' + side}>
@@ -179,5 +187,22 @@ const imagePrefabTopBot = (image, frameTop, frameBot, extraTag) => {
             {/* <img className='imageFrame-top' src={"/iib-and-ifa/images/" + frameTop} alt="" />
             <img className='imageFrame-bot' src={"/iib-and-ifa/images/" + frameBot} alt="" /> */}
         </div>
+    )
+}
+
+const getName = () => {
+    const params = new Proxy(new URLSearchParams(window.location.search), {
+        get: (searchParams, prop) => searchParams.get(prop),
+    });
+
+    // Get the value of "some_key" in eg "https://example.com/?some_key=some_value"
+    var session = params.name; // "some_value"
+
+    if (session == null) {
+        return "Invitee";
+    }
+
+    return (
+        session
     )
 }

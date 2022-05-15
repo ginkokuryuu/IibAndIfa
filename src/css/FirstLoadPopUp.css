@@ -68,6 +68,7 @@
 .popup .invited{
     font-size: 0.5em;
     font-weight: 700;
+    margin-bottom: 10px;
 }
 
 .popup .wedding-celebration{
@@ -106,6 +107,11 @@
     background-color: #a67a5b; */
     color: rgb(255, 255, 255);
     background-color: #a4b1a0;
+}
+
+.invitee-name{
+    font-size: 0.7em;
+    margin-bottom: 5px;
 }
 
 .animate {

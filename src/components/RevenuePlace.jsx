@@ -72,7 +72,7 @@ const getSession = () => {
     });
     
     // Get the value of "some_key" in eg "https://example.com/?some_key=some_value"
-    var session = params.sesi; // "some_value"
+    var session = params.type; // "some_value"
 
     if(session == null){
         return "13.00 - 14.00";

@@ -48,7 +48,7 @@ export default function Countdown() {
         <div className='countdown'>
             {separator('bot')}
             <div className="imageContainer">
-                <img className='imageContained' src="/iib-and-ifa/images/photos/countdown.png" alt='' />
+                <img className='imageContained' src="/iib-and-ifa/images/photos/countdown-2.png" alt='' />
                 <div className='imageOverlay'></div>
 
                 <div className='timerText'>

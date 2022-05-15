@@ -21,6 +21,32 @@ body{
     color: #517470;
 }
 
+.end-credit{
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    color: #ffffff;
+    font-size: 48px;
+    font-weight: 200;
+}
+
+.end-credit-text{
+    font-family: 'palmaton';
+    text-align: left;
+    font-size: 1.2em;
+    
+    position: absolute;
+    right: 3%;
+    bottom: 35%;
+}
+
+.end-credit-made-by{
+    position: absolute;
+    right: 3%;
+    bottom: 3%;
+    font-size: 0.3em;
+}
+
 .shadow-4 {
     box-shadow: 0 1px 1px rgba(0,0,0,0.15), 
                 0 2px 2px rgba(0,0,0,0.15), 
@@ -41,16 +67,28 @@ body{
     .App{
         width: 55vw;
     }
+
+    .end-credit{
+        font-size: 48px;
+    }
 }
 
 @media screen and (max-width: 1024px){
     .App{
         width: 70vw;
     }
+
+    .end-credit{
+        font-size: 48px;
+    }
 }
 @media screen and (max-width: 768px){
     .App{
         width: 100vw;
+    }
+
+    .end-credit{
+        font-size: 36px;
     }
 }
 
